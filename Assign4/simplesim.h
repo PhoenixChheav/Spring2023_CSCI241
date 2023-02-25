@@ -1,13 +1,12 @@
 #ifndef SIMPLESIM_H
 #define SIMPLESIM_H
-
 //********************************************************************
 //
 // simplesim.h
 // CSCI 241 Assignment 4
 //
-// Created by your-name (your-zid)
-//
+// Created by Leang Y Chheav (z-id: Z1966108)
+// and Sam Normoyle (z-id: Z1980761)
 //********************************************************************
 
 class simplesim

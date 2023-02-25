@@ -4,7 +4,7 @@
 // CSCI 241 Assignment 4
 //
 // Created by Leang Y Chheav (z-id: Z1966108)
-//
+// and Sam Normoyle (z-id: Z1980761)
 //********************************************************************
 
 #include "simplesim.h"
