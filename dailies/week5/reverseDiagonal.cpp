@@ -3,6 +3,8 @@
 
 using std::cout;
 using std::endl;
+using std::swap;
+
 
 static void print_array(int array[][4])
 {
@@ -50,4 +52,19 @@ int main()
     print_array(array2);
 
     return 0;
+}
+
+void reverse_diagonal(int array[][4]){
+    int count = 0;
+    int i = 0;
+    int j = 4;
+
+    
+    while(i < j){
+        swap(array[i][i], array[j - 1][j - 1]);
+
+        swap(array[i][j - 1], array[j - 1][i]);
+        i++;
+        j--;
+    }
 }
