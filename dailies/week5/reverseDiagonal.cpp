@@ -57,7 +57,7 @@ int main()
 void reverse_diagonal(int array[][4]){
     int count = 0;
     int i = 0;
-    int j = 4;
+    int j = 4v;
 
     
     while(i < j){
