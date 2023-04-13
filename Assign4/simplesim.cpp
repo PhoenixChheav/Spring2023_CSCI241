@@ -63,7 +63,7 @@ bool simplesim::load_program()
             // boundaries of the memory array, print error message and
             // return false.
             if(count >= 100){
-                cout << "*** ABEND: pgm load: pgm too large ***" << endl << endl;
+                cout << "*** ABEND: pgm load: pgm too large ***" << endl;
                 return false;
             }
 
@@ -74,7 +74,7 @@ bool simplesim::load_program()
 
             //cout << instruction << endl;
         }else{
-            cout << "*** ABEND: pgm load invalid word ***" << endl << endl;
+            cout << "*** ABEND: pgm load: invalid word ***" << endl;
             return false;
         }
         
@@ -95,8 +95,8 @@ void simplesim::execute_program()
         // Check for an addressability error. If instruction_counter
         // is outside the boundaries of the memory array, print error
         // and return.
-        if(instruction_counter > 100){
-            cout << "*** ABEND: program is too large ***" << endl;
+        if(instruction_counter >= 100){
+            cout << "*** ABEND: addressability error ***" << endl;
             return;
         }else if(instruction_counter >= 0 && instruction_counter < 100){
             // Fetch the instruction and extract the operation code
@@ -196,6 +196,10 @@ void simplesim::execute_program()
                 accumulator = temp;
                 break;
 
+            case BRANCH:
+                instruction_counter = operand;
+                break;
+
             case BRANCHNEG:
                 if(accumulator < 0){
                     instruction_counter = operand;
@@ -208,6 +212,9 @@ void simplesim::execute_program()
             case BRANCHZERO:
                 if(accumulator == 0){
                     instruction_counter = operand;
+                }
+                else{
+                    instruction_counter++;
                 }
                 break;
 

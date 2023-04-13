@@ -15,11 +15,11 @@ class simplesim
     int memory[100];
 
     // Simplesim registers.
-    int accumulator = 0;
-    int instruction_counter = 0;
-    int instruction_register = 0;
-    int operation_code = 0;
-    int operand = 0;
+    int accumulator;
+    int instruction_counter;
+    int instruction_register;
+    int operation_code;
+    int operand;
 
 public:
 

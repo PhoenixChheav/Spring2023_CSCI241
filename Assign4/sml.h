@@ -12,17 +12,15 @@
 
 #define READ 11
 #define WRITE 12
-#define LOAD 22
 #define STORE 21
+#define LOAD 22
 #define ADD 31
 #define SUBTRACT 32
 #define MULTIPLY 33
-#define DIVISION 34
+#define DIVIDE 34
 #define BRANCH 41
 #define BRANCHZERO 42
 #define BRANCHNEG 43
-// TODO - Define remaining operations
-
 #define HALT 44
 
 #define DEFAULT 7777   // Default value for empty memory elements
