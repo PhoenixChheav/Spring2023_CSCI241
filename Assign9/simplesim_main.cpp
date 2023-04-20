@@ -3,6 +3,7 @@
 
 int main()
 {
+    
     simplesim s;
 
     if (s.load_program())
