@@ -334,7 +334,7 @@ bool bstree<K, V>::remove(const K& key){
     }
 
     //Delete the node, decrement the tree size, and signal success
-    delete[] p; //Delete the node pointed to by p
+    delete p; //Delete the node pointed to by p
     t_size--;
     return true;
 }
@@ -509,7 +509,7 @@ void bstree<K, V>::destroy(node<K, V>* root){
         destroy(root->r_subtree);
 
         //delete the node pointed to by root
-        delete[] root;
+        delete root;
     }
 }
 

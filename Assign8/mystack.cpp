@@ -132,7 +132,6 @@ void mystack::push(int value){
     //Allocate a new stack node, new_node;
     node *new_node = new node(value, stk_top);
    
-
     stk_top = new_node;
     stk_size++;
 }

@@ -13,11 +13,7 @@
 #include <iostream>
 #include <stdexcept>
 using namespace std;
-template <class T>
-class mylist;
 
-template <class T>
-std::ostream &operator<<(std::ostream &, const mylist<T> &);
 template <class T>
 struct node{
     T value;
@@ -30,6 +26,13 @@ struct node{
     this->next = next;
     }
 };
+
+template <class T>
+class mylist;
+
+template <class T>
+std::ostream &operator<<(std::ostream &, const mylist<T> &);
+
 
 //forward declaration of the mylist template class
 template <class T>
@@ -91,13 +94,13 @@ mylist<T>::~mylist(){
  * @param x 
  */
 template <class T>
-mylist<T>::mylist(const mylist<T>& x){
+mylist<T>::mylist(const mylist<T>& x){//copy constructor
     clear();
     clone(x);
 }
 
 /**
- * @brief operator=(const mylist<T>& x): copy assignment operator
+ * @brief operator=(const mylist<T>& x): overloaded operator
  * 
  * @tparam T 
  * @param x object of class T
